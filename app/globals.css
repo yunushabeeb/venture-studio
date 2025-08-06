@@ -3,6 +3,13 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --sidebar-bg: #fff;
+  --sidebar-text: #1B2528;
+  --sidebar-active-text: #3A6C7B;
+  --sidebar-active-bg: rgba(56, 103, 118, 0.16);
+  --sidebar-hover-bg: rgba(56, 103, 118, 0.10);
+  --sidebar-width: 320px;
+  --brand: #437D8E;
 }
 
 @theme inline {
