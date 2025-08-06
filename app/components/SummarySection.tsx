@@ -1,5 +1,5 @@
 'use client'
-import { summaryData } from "../lib/content";
+import { summaryCards } from "../lib/content";
 import SummaryCard from "./SummaryCard";
 import { useSearchStore } from "../lib/store";
 
@@ -21,7 +21,7 @@ export default function SummarySection() {
         Summary
       </h2>
       <div className="flex flex-col gap-7 md:flex-row">
-        {summaryData.map((item) => (
+        {summaryCards.map((item) => (
           <SummaryCard key={item.title} {...item} />
         ))}
       </div>

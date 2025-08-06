@@ -1,28 +1,41 @@
-export const summaryData = [
+import { DashboardSummary, Transaction } from "../types";
+
+export const dashboardSummary: DashboardSummary = {
+  totalBalance: 12345,
+  totalCredits: 7890,
+  totalDebits: 4455,
+  transactionCount: 150,
+  balanceChange: 5,
+  creditsChange: 3,
+  debitsChange: -2,
+  transactionChange: 10,
+};
+
+export const summaryCards = [
   {
     title: "Total Balance",
-    value: "$12,345",
-    change: "+5%",
+    value: `$${dashboardSummary.totalBalance.toLocaleString()}`,
+    change: `${dashboardSummary.balanceChange > 0 ? "+" : ""}${dashboardSummary.balanceChange}%`,
   },
   {
     title: "Total Credits",
-    value: "$7,890",
-    change: "+3%",
+    value: `$${dashboardSummary.totalCredits.toLocaleString()}`,
+    change: `${dashboardSummary.creditsChange > 0 ? "+" : ""}${dashboardSummary.creditsChange}%`,
   },
   {
     title: "Total Debits",
-    value: "$4,455",
-    change: "-2%",
+    value: `$${dashboardSummary.totalDebits.toLocaleString()}`,
+    change: `${dashboardSummary.debitsChange > 0 ? "+" : ""}${dashboardSummary.debitsChange}%`,
   },
   {
     title: "Transactions",
-    value: "150",
-    change: "+10%",
+    value: dashboardSummary.transactionCount.toLocaleString(),
+    change: `${dashboardSummary.transactionChange > 0 ? "+" : ""}${dashboardSummary.transactionChange}%`,
   },
 ];
 
 
-export const transactions = [
+export const transactions: Transaction[] = [
   {
     id: "1",
     date: "2023-10-01",

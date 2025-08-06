@@ -38,7 +38,8 @@ export default function Sidebar({
           open
             ? "w-[var(--sidebar-width)] opacity-100"
             : "w-0 opacity-0",
-          "md:static md:h-[calc(100vh-var(--header-height,56px))] md:shadow-none"
+          // "md:fixed md:top-0 md:left-0 md:h-screen md:w-[var(--sidebar-width)] md:shadow-none"
+          "md:static md:h-[calc(100vh-var(--header-height,56px))] md:shadow-none -z-1"
         )}
         style={{
           width: open ? "var(--sidebar-width)" : "0",
