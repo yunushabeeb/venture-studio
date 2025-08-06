@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { timmana } from "../lib/fonts";
 import IconButton from "./IconButton";
 import Avatar from "./Avatar";
 import Brand from "./Brand";
@@ -40,30 +39,51 @@ export default function Header({ onSidebarToggle }: HeaderProps) {
         >
           <Image src="/icons/menu.png" alt="Menu" width={24} height={24} />
         </button>
-
-        {/* Brand Identification */}
         <Brand />
-
       </div>
       {/* Right: Search, App Grid, Avatar */}
-      <div className="flex items-center gap-7">
-        {showSearch ? (
-          <input
-            ref={inputRef}
-            type="text"
-            value={search}
-            onChange={handleInput}
-            onBlur={handleBlur}
-            placeholder="Search transactions..."
-            className="px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring w-48 transition"
-          />
-        ) : (
+      <div className="flex items-center gap-7 relative">
+        {/* Desktop search input */}
+        <div className="hidden sm:block">
+          {showSearch ? (
+            <input
+              ref={inputRef}
+              type="text"
+              value={search}
+              onChange={handleInput}
+              onBlur={handleBlur}
+              placeholder="Search transactions..."
+              className="px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring w-48 transition"
+            />
+          ) : (
+            <IconButton
+              src="/icons/search.png"
+              alt="Search"
+              onClick={() => setShowSearch(true)}
+            />
+          )}
+        </div>
+        {/* Mobile search input (drops below header) */}
+        <div className="block sm:hidden">
           <IconButton
             src="/icons/search.png"
             alt="Search"
             onClick={() => setShowSearch(true)}
           />
-        )}
+          {showSearch && (
+            <div className="absolute left-0 right-0 top-full mt-2 z-20">
+              <input
+                ref={inputRef}
+                type="text"
+                value={search}
+                onChange={handleInput}
+                onBlur={handleBlur}
+                placeholder="Search transactions..."
+                className="w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring bg-white shadow"
+              />
+            </div>
+          )}
+        </div>
         <IconButton src="/icons/app-grid.png" alt="Apps" />
         <Avatar src="/images/avatars/avatar-1.png" alt="User Avatar" />
       </div>

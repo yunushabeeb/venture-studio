@@ -10,10 +10,10 @@ type Transaction = typeof initialTransactions[number];
 type SortKey = keyof Transaction;
 type SortOrder = "asc" | "desc";
 
-function safeString(val: any) {
+function safeString(val: unknown) {
   return typeof val === "string" ? val : "";
 }
-function safeNumber(val: any) {
+function safeNumber(val: unknown) {
   return typeof val === "number" && !isNaN(val) ? val : 0;
 }
 
