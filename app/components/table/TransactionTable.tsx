@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { columns, transactions as initialTransactions } from "../lib/content";
-import { useSearchStore } from "../lib/store";
+import { columns, transactions as initialTransactions } from "../../lib/content";
+import { useSearchStore } from "../../lib/store";
 import TableCell from "./TableCell";
 import TypeBadge from "./TypeBadge";
 

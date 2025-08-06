@@ -1,7 +1,7 @@
 'use client'
-import { summaryCards } from "../lib/content";
+import { summaryCards } from "../../lib/content";
 import SummaryCard from "./SummaryCard";
-import { useSearchStore } from "../lib/store";
+import { useSearchStore } from "../../lib/store";
 
 
 export default function SummarySection() {

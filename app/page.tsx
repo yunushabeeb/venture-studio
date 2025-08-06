@@ -1,6 +1,6 @@
-import UpperBar from "./components/UpperBar";
-import SummarySection from "./components/SummarySection";
-import TransactionTable from "./components/TransactionTable";
+import UpperBar from "./components/upperbar/UpperBar";
+import SummarySection from "./components/summary/SummarySection";
+import TransactionTable from "./components/table/TransactionTable";
 
 export default function Home() {
   return (

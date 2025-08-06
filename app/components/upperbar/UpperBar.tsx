@@ -1,9 +1,9 @@
 'use client';
 import Image from "next/image";
-import ActiveStatus from "./ActiveStatus";
+import ActiveStatus from "../ActiveStatus";
 import UpperBarAvatars from "./UpperBarAvatars";
 import UpperBarTabs from "./UpperBarTabs";
-import { useSearchStore } from "../lib/store";
+import { useSearchStore } from "../../lib/store";
 
 export default function UpperBar() {
   const search = useSearchStore((s) => s.search);
