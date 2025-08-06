@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wallet Ledger Dashboard
 
-## Getting Started
+A modern, responsive dashboard for tracking wallet transactions and managing your cryptocurrency portfolio. Built with Next.js, React, TypeScript, Tailwind CSS, and Zustand.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Responsive UI**: Mobile-first, adapts to all screen sizes
+- **Component-based architecture**: Clean, reusable React components
+- **Sortable & Searchable Table**: Sort and filter transactions in real time
+- **Summary Cards**: At-a-glance financial metrics
+- **Modern Design**: Figma-accurate, accessible, and visually appealing
+- **State Management**: Global search state with Zustand
+- **Fast & Performant**: Optimized rendering and smooth interactions
+
+## 📦 Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS v4](https://tailwindcss.com/)
+- [Zustand](https://zustand-demo.pmnd.rs/)
+- [Google Fonts: Public Sans, Timmana](https://fonts.google.com/)
+
+## 🚀 Getting Started
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/yunushabeeb/venture-studio.git
+   cd venture-studio
+   ```
+
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```sh
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🖼️ Design Reference
+
+- [Figma Design File](https://drive.google.com/file/d/1rwC8iEBBU9YpSF7iDbEDZJ9i_JqslHT5/view?usp=sharing)
+
+## 📝 Project Structure
+
+```
+app/
+  components/      # Reusable UI components
+  lib/             # Zustand store, sample data, and utilities
+  summary/         # Summary section components
+  table/           # Transaction table components
+  upperbar/        # Upper bar (header) components
+  globals.css      # Tailwind and custom CSS variables
+  layout.tsx       # App layout
+  page.tsx         # Main dashboard page
+public/
+  icons/           # App icons
+  images/avatars/  # User avatars
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Colors & Fonts:** Managed via CSS variables in [`app/globals.css`](app/globals.css )
+- **Sample Data:** Edit or extend in [`app/lib/content.ts`](app/lib/content.ts )
+- **State Management:** See [`app/lib/store.ts`](app/lib/store.ts ) for Zustand setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧪 Testing
 
-## Learn More
+- Manual UI/UX testing recommended (no automated tests included)
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Deploy easily on [Vercel](https://vercel.com/) and live version is [here](https://venture-studio-peach.vercel.app/) 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🙏 Credits
 
-## Deploy on Vercel
+- [Resilience 17 Venture Studio](https://resilience17.com/)
+- [Figma Design](https://drive.google.com/file/d/1rwC8iEBBU9YpSF7iDbEDZJ9i_JqslHT5/view?usp=sharing)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Ready to track your wallet with style and precision!**
