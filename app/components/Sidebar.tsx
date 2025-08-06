@@ -18,14 +18,13 @@ export default function Sidebar({
   open?: boolean;
   onClose?: () => void;
   onSelect?: (key: string) => void;
-}) {
-  console.log("Sidebar state", open)
+  }) {
   return (
     <>
       {/* Overlay for mobile */}
       <div
         className={clsx(
-          "fixed inset-0 z-40 bg-black/30 transition-opacity md:hidden",
+          "fixed inset-0 z-20 bg-black/30 transition-opacity md:hidden",
           open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         )}
         onClick={onClose}
@@ -34,18 +33,12 @@ export default function Sidebar({
       {/* Sidebar */}
       <aside
         className={clsx(
-          "fixed z-50 left-0 top-0 md:h-full bg-[var(--sidebar-bg)] max-md:pt-7 pb-7 shadow transition-all duration-300 ease-in-out",
+          "fixed z-30 left-0 top-0 md:h-full bg-[var(--sidebar-bg)] pb-7 shadow transition-all duration-300 ease-in-out overflow-hidden",
           open
-            ? "w-[var(--sidebar-width)] opacity-100"
+            ? "w-5/12 md:w-3/12 top-16 opacity-100 md:fixed md:top-24 md:left-0 md:h-screen  md:shadow-none"
             : "w-0 opacity-0",
-          // "md:fixed md:top-0 md:left-0 md:h-screen md:w-[var(--sidebar-width)] md:shadow-none"
-          "md:static md:h-[calc(100vh-var(--header-height,56px))] md:shadow-none -z-1"
+
         )}
-        style={{
-          width: open ? "var(--sidebar-width)" : "0",
-          minWidth: open ? "var(--sidebar-width)" : "0",
-          overflow: "hidden",
-        }}
         aria-hidden={!open && typeof window !== "undefined" && window.innerWidth < 768}
       >
         <nav>

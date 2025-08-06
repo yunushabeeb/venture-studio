@@ -10,7 +10,7 @@ export default function SummarySection() {
   if (search.trim() !== "") return null;
 
   return (
-    <section className="mt-8">
+    <section>
       <h2
         className="font-bold text-[15px] mb-5"
         style={{
@@ -20,7 +20,7 @@ export default function SummarySection() {
       >
         Summary
       </h2>
-      <div className="flex flex-col gap-7 md:flex-row">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7">
         {summaryCards.map((item) => (
           <SummaryCard key={item.title} {...item} />
         ))}

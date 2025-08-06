@@ -30,7 +30,7 @@ export default function Header({ onSidebarToggle }: HeaderProps) {
   }
 
   return (
-    <header className="sticky top-0 z-30 flex items-center justify-between px-4 py-3 border-b border-gray-100 bg-white bg-opacity-90 backdrop-blur">
+    <header className="sticky top-0 z-10 flex items-center justify-between px-4 py-3 border-b border-gray-100 bg-white bg-opacity-90 backdrop-blur">
       {/* Left: Menu + Brand */}
       <div className="flex items-center">
         <button
