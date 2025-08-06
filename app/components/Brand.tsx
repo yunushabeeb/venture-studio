@@ -3,7 +3,7 @@ import { timmana } from "../lib/fonts";
 
 export default function Brand() {
   return (
-    <div className="ml-7 flex items-center">
+    <div className="ml-2 md:ml-7 flex items-center">
       <Image src="/icons/logo.png" alt="FinTrack Logo" width={32} height={32} />
       <span
         className={`${timmana.className} ml-1 text-[24px] font-normal`}
