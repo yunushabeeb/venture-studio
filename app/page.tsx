@@ -1,8 +1,13 @@
-import Image from "next/image";
+import UpperBar from "./components/upperbar/UpperBar";
+import SummarySection from "./components/summary/SummarySection";
+import TransactionTable from "./components/table/TransactionTable";
+
 export default function Home() {
   return (
     <div>
-      <h1>17th Venture Studio</h1>
+      <UpperBar />
+      <SummarySection />
+      <TransactionTable />
     </div>
   );
 }
