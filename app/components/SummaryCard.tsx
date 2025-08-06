@@ -11,7 +11,7 @@ export default function SummaryCard({
 }) {
   return (
     <div
-      className="flex flex-col justify-between rounded-[18px] p-7 min-w-[0] flex-1"
+      className="flex flex-col justify-between rounded-[18px] p-7 min-w-[0] flex-1 transition-shadow hover:shadow-lg hover:bg-[rgba(52,97,111,0.16)] cursor-pointer"
       style={{
         background: "rgba(52, 97, 111, 0.09)",
       }}
