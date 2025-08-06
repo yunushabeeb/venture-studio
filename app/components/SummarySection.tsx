@@ -1,7 +1,14 @@
+'use client'
 import { summaryData } from "../lib/content";
 import SummaryCard from "./SummaryCard";
+import { useSearchStore } from "../lib/store";
+
 
 export default function SummarySection() {
+  const search = useSearchStore((s) => s.search);
+
+  if (search.trim() !== "") return null;
+
   return (
     <section className="mt-8">
       <h2

@@ -1,9 +1,12 @@
+'use client';
 import Image from "next/image";
 import ActiveStatus from "./ActiveStatus";
 import UpperBarAvatars from "./UpperBarAvatars";
 import UpperBarTabs from "./UpperBarTabs";
+import { useSearchStore } from "../lib/store";
 
 export default function UpperBar() {
+  const search = useSearchStore((s) => s.search);
   return (
     <section className="flex flex-col gap-4 py-7">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -56,8 +59,13 @@ export default function UpperBar() {
           </button>
         </div>
       </div>
-      <UpperBarAvatars />
-      <UpperBarTabs />
+
+      {search.trim() === "" && (
+        <>
+          <UpperBarAvatars />
+          <UpperBarTabs />
+        </>
+      )}
     </section>
   );
 }
