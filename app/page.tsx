@@ -1,7 +1,9 @@
+import UpperBar from "./components/UpperBar";
+
 export default function Home() {
   return (
     <div>
-      <h1>Wallet Ledger</h1>
+      <UpperBar />
     </div>
   );
 }
